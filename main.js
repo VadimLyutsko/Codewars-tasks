@@ -92,8 +92,7 @@
 // 3
 
 // Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
-//
-//     Examples input/output:
+// Examples input/output:
 
 
 // function XO(str) {
@@ -140,33 +139,59 @@
 // "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
+//
+// function order(words) {
+//     const myMatrix = {
+//         '1': 1,
+//         '2': 2,
+//         '3': 3,
+//         '4': 4,
+//         '5': 5,
+//         '6': 6,
+//         '7': 7,
+//         '8': 8,
+//         '9': 9,
+//     }
+//     let preResultArray = []
+//     let arrayOfWords = words.split(' ')
+//
+//     for (let i = 0; i < arrayOfWords.length; i++) {
+//         let word = arrayOfWords[i]
+//         for (let j = 0; j < word.length; j++) {
+//             if (myMatrix[word[j].toString()]){
+//                 preResultArray[word[j] -1]=word
+//             }
+//         }
+//     }
+//     return preResultArray.join(' ')
+// }
+//
+//
+// order("is2 Thi1s T4est 3a")
+// order("4of Fo1r pe6ople g3ood th5e the2")
 
-function order(words) {
-    const myMatrix = {
-        '1': 1,
-        '2': 2,
-        '3': 3,
-        '4': 4,
-        '5': 5,
-        '6': 6,
-        '7': 7,
-        '8': 8,
-        '9': 9,
-    }
-    let preResultArray = []
-    let arrayOfWords = words.split(' ')
 
-    for (let i = 0; i < arrayOfWords.length; i++) {
-        let word = arrayOfWords[i]
-        for (let j = 0; j < word.length; j++) {
-            if (myMatrix[word[j].toString()]){
-                preResultArray[word[j] -1]=word
-            }
-        }
-    }
-    return preResultArray.join(' ')
+// 5
+
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+//
+// Example: (Input --> Output)
+//
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+//
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str) {
+    let arrOfStr = []
+    let result = true
+
+    str.toLowerCase().split('').forEach(i => {
+        arrOfStr.includes(i) ? result = false : true
+        arrOfStr.push(i)
+    })
+    return result
 }
 
-
-order("is2 Thi1s T4est 3a")
-order("4of Fo1r pe6ople g3ood th5e the2")
+isIsogram('ava')
