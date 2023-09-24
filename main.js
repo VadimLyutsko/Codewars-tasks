@@ -96,43 +96,77 @@
 //     Examples input/output:
 
 
-function XO(str) {
-    let calcX = 0;
-    let calcO = 0;
+// function XO(str) {
+//     let calcX = 0;
+//     let calcO = 0;
+//
+//     str.toString().toLocaleLowerCase().split('').forEach(i => {
+//
+//         switch (i) {
+//             case 'o':
+//                 calcO++;
+//                 return;
+//             case 'x':
+//                 calcX++;
+//                 return
+//         }
+//     })
+//
+//     if (!str.includes('o') && !str.includes('x')) {
+//         return true
+//     } else return calcX === calcO;
+// }
+//
+// XO("ooxx")
+// XO("xooxx")
+// XO("ooxXm")
+// XO("zpzpzpp")
+// XO("zzoo")
+//
+// // XO("ooxx") => true
+// // XO("xooxx") => false
+// // XO("ooxXm") => true
+// // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// // XO("zzoo") => false
 
-    str.toString().toLocaleLowerCase().split('').forEach(i => {
 
-        switch (i) {
-            case 'o':
-                calcO++;
-                return;
-            case 'x':
-                calcX++;
-                return
+// 4
+
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+//     Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+//
+//     Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+function order(words) {
+    const myMatrix = {
+        '1': 1,
+        '2': 2,
+        '3': 3,
+        '4': 4,
+        '5': 5,
+        '6': 6,
+        '7': 7,
+        '8': 8,
+        '9': 9,
+    }
+    let preResultArray = []
+    let arrayOfWords = words.split(' ')
+
+    for (let i = 0; i < arrayOfWords.length; i++) {
+        let word = arrayOfWords[i]
+        for (let j = 0; j < word.length; j++) {
+            if (myMatrix[word[j].toString()]){
+                preResultArray[word[j] -1]=word
+            }
         }
-
-        // (i === 'o') ? calcO++ : calcX++
-
-        // if (i === 'o') {
-        //     calcO++;
-        // } else if (i === 'x') {
-        //     calcX++;
-        // }
-    })
-
-    if (!str.includes('o') && !str.includes('x')) {
-        return true
-    } else return calcX === calcO;
+    }
+    return preResultArray.join(' ')
 }
 
-XO("ooxx")
-XO("xooxx")
-XO("ooxXm")
-XO("zpzpzpp")
-XO("zzoo")
 
-// XO("ooxx") => true
-// XO("xooxx") => false
-// XO("ooxXm") => true
-// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
-// XO("zzoo") => false
+order("is2 Thi1s T4est 3a")
+order("4of Fo1r pe6ople g3ood th5e the2")
