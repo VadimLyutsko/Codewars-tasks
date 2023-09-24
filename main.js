@@ -258,5 +258,48 @@
 // getSum(-1, 2)
 
 
+// 9
+
+// Given the triangle of consecutive odd numbers:
+//
+//     1
+// 3     5
+// 7     9    11
+// 13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+//
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+//
+// function rowSumOddNumbers(n) {
+//     let numbers_before_n_count = (n - 1) * n / 2;
+//     console.log(numbers_before_n_count)
+//
+//     let first_number_in_nth_row = numbers_before_n_count * 2 + 1;
+//     let last_number_in_nth_row = first_number_in_nth_row + 2 * (n - 1);
+//
+//     return n * (first_number_in_nth_row + last_number_in_nth_row) / 2;
+// }
+//
+// rowSumOddNumbers(15)
 
 
+// 10
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+//
+//     Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+//
+//     Don't forget the space after the closing parentheses!
+//
+//
+// function createPhoneNumber(numbers) {
+//     return `(${(numbers.slice(0, 3).join(''))}) ${(numbers.slice(3, 6).join(''))}-${(numbers.slice(6, 10).join(''))}`
+// }
+//
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// createPhoneNumber([1, 1, 9, 0, 5, 0, 4, 6, 0, 6]) // => returns "(119) 050-460"
