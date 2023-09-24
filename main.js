@@ -89,3 +89,50 @@
 // //should return "HEY JUDE"
 
 
+// 3
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+//
+//     Examples input/output:
+
+
+function XO(str) {
+    let calcX = 0;
+    let calcO = 0;
+
+    str.toString().toLocaleLowerCase().split('').forEach(i => {
+
+        switch (i) {
+            case 'o':
+                calcO++;
+                return;
+            case 'x':
+                calcX++;
+                return
+        }
+
+        // (i === 'o') ? calcO++ : calcX++
+
+        // if (i === 'o') {
+        //     calcO++;
+        // } else if (i === 'x') {
+        //     calcX++;
+        // }
+    })
+
+    if (!str.includes('o') && !str.includes('x')) {
+        return true
+    } else return calcX === calcO;
+}
+
+XO("ooxx")
+XO("xooxx")
+XO("ooxXm")
+XO("zpzpzpp")
+XO("zzoo")
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
