@@ -348,3 +348,70 @@
 //
 // // digPow(89, 1)
 // digPow(46288, 3)
+
+
+// 12
+
+// Given a string of words, you need to find the highest scoring word.
+//
+//     Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+//
+//     For example, the score of abad is 8 (1 + 2 + 1 + 4).
+//
+//     You need to return the highest scoring word as a string.
+//
+//     If two words score the same, return the word that appears earliest in the original string.
+//
+//     All letters will be lowercase and all inputs will be valid.
+// function high(x){
+//     // 1. split x by ' ' to an array.
+//     const wordList = x.split(' ');
+//
+//     // 2. calculate each word score to another array.
+//     const getScore = (word) => {
+//         return word.split('').reduce((prevScore, currWord) => prevScore + currWord.charCodeAt(0) - 96, 0)
+//     }
+//     const scoreList = wordList.map(word => getScore(word));
+//
+//     // 3. get the highest score and index
+//     let highestIndex = 0;
+//     let highestScore = 0;
+//     scoreList.forEach((score, i) => {
+//         if (score > highestScore) {
+//             highestIndex = i;
+//             highestScore = score;
+//         }
+//     });
+//
+//     // 4. return the string of the highest score index of wordList
+//     return wordList[highestIndex];
+// }
+//
+// high('what time are we climbing up the volcano')
+
+
+// 13
+
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+//
+// Additionally, if the number is negative, return 0.
+//
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+//
+//     Courtesy of projecteuler.net (Problem 1)
+//
+// function solution(number) {
+//     let result = 0;
+//     if (number < 0) return result
+//
+//     for (let i = 1; i < number; i++) {
+//         if (i % 3 === 0 || i % 5 === 0) {
+//             result += i
+//         }
+//     }
+//     return result
+// }
+//
+// solution(10)
