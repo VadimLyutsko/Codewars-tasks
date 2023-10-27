@@ -697,3 +697,23 @@
 //     );
 // };
 
+
+
+// Started studying BEM - methodology
+// const f = (s) => {
+//     let arr = []
+//     arr.push(s[0].toUpperCase())
+//     for (let i = 1; i < s.length; i++) {
+//         arr.push(s[i].toLowerCase())
+//     }
+//
+//     let arr1 = []
+//     arr1 = s.split(' ')
+//     console.log(arr1)
+//     let res = [...arr1]
+//     res[3] = `- ${res[3].toLowerCase()}`
+//
+//     console.log(res.join(' '))
+// }
+//
+// f('Started studying BEM METHODOLOGY')
