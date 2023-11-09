@@ -731,3 +731,19 @@
 //
 //     return res
 // }
+
+// 21
+
+// Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
+
+// function take(arr, n) {
+//     const res = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         i < n && res.push(arr[i])
+//     }
+//
+//     return res
+// }
+//
+// take([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
