@@ -717,6 +717,7 @@
 //
 // f('Started studying BEM METHODOLOGY')
 
+
 // 20
 
 // Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
@@ -732,10 +733,10 @@
 //     return res
 // }
 
+
 // 21
 
 // Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
-
 // function take(arr, n) {
 //     const res = []
 //
@@ -747,3 +748,44 @@
 // }
 //
 // take([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
+
+
+// 22
+
+// DESCRIPTION:
+//     You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
+//
+//     Examples
+//     [2, 4, 0, 100, 4, 11, 2602, 36] -->  11 (the only odd number)
+//
+// [160, 3, 1719, 19, 11, 13, -21] --> 160 (the only even number)
+// function findOutlier(integers) {
+//     let res = ''
+//     let flagEven =
+//         integers[0] % 2 === 0 && integers[1] % 2 === 0 ||
+//         integers[0] % 2 === 0 && integers[2] % 2 === 0 ||
+//         integers[1] % 2 === 0 && integers[2] % 2 === 0
+//
+//     let flagOdd =
+//         integers[0] % 2 !== 0 && integers[1] % 2 !== 0 ||
+//         integers[0] % 2 !== 0 && integers[2] % 2 !== 0 ||
+//         integers[1] % 2 !== 0 && integers[2] % 2 !== 0
+//
+//     if (flagEven) {
+//         for (let i = 0; i < integers.length; i++) {
+//             integers[i] % 2 !== 0 ? res = integers[i] : ''
+//         }
+//     }
+//
+//     if (flagOdd) {
+//         for (let i = 0; i < integers.length; i++) {
+//             integers[i] % 2 === 0 ? res = integers[i] : ''
+//         }
+//     }
+//
+//     return res
+// }
+//
+// findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
+// findOutlier([160, 3, 1719, 19, 11, 13, -21])
+// findOutlier([0, 1, 2])
