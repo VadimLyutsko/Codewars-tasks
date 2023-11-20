@@ -789,3 +789,10 @@
 // findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
 // findOutlier([160, 3, 1719, 19, 11, 13, -21])
 // findOutlier([0, 1, 2])
+
+elem.onclick = function(event) {
+    // вывести тип события, элемент и координаты клика
+    alert(event.type + " на " + event.currentTarget);
+    alert("Координаты: " + event.clientX + ":" + event.clientY);
+};
+
