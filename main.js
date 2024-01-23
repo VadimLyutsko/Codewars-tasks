@@ -790,9 +790,20 @@
 // findOutlier([160, 3, 1719, 19, 11, 13, -21])
 // findOutlier([0, 1, 2])
 
-elem.onclick = function(event) {
-    // вывести тип события, элемент и координаты клика
-    alert(event.type + " на " + event.currentTarget);
-    alert("Координаты: " + event.clientX + ":" + event.clientY);
-};
+// elem.onclick = function(event) {
+//     // вывести тип события, элемент и координаты клика
+//     alert(event.type + " на " + event.currentTarget);
+//     alert("Координаты: " + event.clientX + ":" + event.clientY);
+// };
 
+// function getWords(word, chars) {
+//     var index = word.indexOf("?"), arr = [];
+//     if (index >= 0) {
+//         const charsSlice1 = chars.slice(1);
+//         for (var i = 0; i < chars[0].length; i++) {
+//             arr = arr.concat(getWords(word.replace("?", chars[0][i]), charsSlice1));
+//         }
+//         return arr;
+//     }
+//     return [word];
+// };
