@@ -815,22 +815,40 @@
 // pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
 // pigIt('Hello world !');     // elloHay orldway !
 
-function pigIt(str) {
-    return str
-        .split(' ')
-        .map(word => {
-            if (word === '!' |word === '?' ) {
-                return word
-            } else {
-                let item = ''
-                let arrItem = word.split('')
-                item = arrItem.slice(1) + arrItem.slice(0, 1) + 'ay'
-                return item.split(',').join('')
-            }
-        })
-        .join(' ')
-}
+// function pigIt(str) {
+//     return str
+//         .split(' ')
+//         .map(word => {
+//             if (word === '!' |word === '?' ) {
+//                 return word
+//             } else {
+//                 let item = ''
+//                 let arrItem = word.split('')
+//                 item = arrItem.slice(1) + arrItem.slice(0, 1) + 'ay'
+//                 return item.split(',').join('')
+//             }
+//         })
+//         .join(' ')
+// }
+//
+// console.log(pigIt('Pig latin is cool'));
+// console.log(pigIt('Hello world ?'));
 
-console.log(pigIt('Pig latin is cool'));
-console.log(pigIt('Hello world ?'));
+// 24
 
+// function duplicateCount(text){
+//     return text
+//         .toLowerCase()
+//         .split('')
+//         .filter((val, i, arr) => {
+//             return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+//         }).length;
+// }
+//
+// console.log(duplicateCount("abcde"))
+// console.log(duplicateCount("aabbcde"))
+// console.log(duplicateCount("aabBcde"))
+// console.log(duplicateCount("indivisibility"))
+// console.log(duplicateCount("Indivisibilities"))
+// console.log(duplicateCount("aA11"))
+// console.log(duplicateCount("ABBA"))
