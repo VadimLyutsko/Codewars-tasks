@@ -873,3 +873,11 @@
 //     miliseconds = miliseconds + h * 3600000;
 //     return miliseconds;
 // }
+
+var reverseString = function (str) {
+  return str
+  .split('')
+  .reverse()
+  .join('')
+  };
+  
